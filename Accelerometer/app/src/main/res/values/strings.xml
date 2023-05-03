@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Accelerometer</string>
+    <string name="title">Shake to get a toast and to switch color</string>
+</resources>
