@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="afterDescendants"
+    android:focusable="auto"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:menu="@menu/toolbar_menu"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/pastel_orange"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pastel_orange"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".MainActivity"
+        tools:showIn="@layout/activity_main">
+
+        <TextureView
+            android:id="@+id/graphTextureView"
+            android:layout_width="406dp"
+            android:layout_height="144dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            style="@style/floating1"
+            android:layout_width="139dp"
+            android:layout_height="110dp"
+            android:layout_marginBottom="65dp"
+            android:clickable="true"
+            android:contentDescription="@string/new_measurement"
+            android:focusable="true"
+            android:onClick="onClickNewMeasurement"
+            android:visibility="visible"
+            app:backgroundTint="@color/tequila"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rippleColor="@android:color/holo_red_light" />
+
+
+        <LinearLayout
+            android:id="@+id/layout_gif"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="167dp"
+            android:background="@drawable/pulse_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gifImageView"
+            android:layout_width="94dp"
+            android:layout_height="97dp"
+            android:layout_marginTop="204dp"
+            android:src="@drawable/giphy"
+            android:background="#FFA559"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="191dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="2dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/montserrat"
+            android:textAlignment="center"
+            android:textColor="@color/tequila"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
+
+        <TextureView
+            android:id="@+id/textureView2"
+            android:layout_width="72dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_instruction"
+            android:layout_width="257dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/montserrat"
+            android:justificationMode="inter_word"
+            android:text="@string/place_finger"
+            android:textColor="@color/tequila"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/textureView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
