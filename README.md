@@ -7,3 +7,8 @@ This repository includes such a simple implementation of sensors in Android smar
 - Pulse sensor
 - Pedometer
 - Fingerprint scanner
+- Gyroscope
+- Temperature
+- Pressure
+- Humidity
+- GPS
