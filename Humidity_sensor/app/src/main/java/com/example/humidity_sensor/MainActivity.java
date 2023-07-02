@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             humiditySensor = sensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY);
             isHumiditySensor =true;
         }else {
-            textView.setText("Humidity Sensor is not availible!");
+            textView.setText("Humidity Sensor is not available!");
             isHumiditySensor = false;
         }
     }
