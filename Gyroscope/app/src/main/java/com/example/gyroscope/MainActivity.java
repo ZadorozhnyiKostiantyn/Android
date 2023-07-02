@@ -26,13 +26,14 @@ public class MainActivity extends AppCompatActivity {
         textX = findViewById(R.id.textX);
         textY = findViewById(R.id.textY);
         textZ = findViewById(R.id.textZ);
-
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     }
 
     public void onResume() {
         super.onResume();
-        sensorManager.registerListener(gyroListener, sensor, SensorManager.SENSOR_DELAY_NORMAL);
+        sensorManager.registerListener(
+                gyroListener,
+                sensor,
+                SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     public void onStop() {
